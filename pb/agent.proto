@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package pb;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option (gogoproto.gostring_all) = true;
+option (gogoproto.equal_all) = true;
+option (gogoproto.verbose_equal_all) = true;
+option (gogoproto.goproto_stringer_all) = false;
+option (gogoproto.stringer_all) =  true;
+option (gogoproto.populate_all) = true;
+option (gogoproto.testgen_all) = false;
+option (gogoproto.benchgen_all) = false;
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+
+
+// The rpc service definition.
+service Agent {
+  // Sends a greeting
+  rpc Call (RpcRequest) returns (RpcReply) {}
+}
+
+// The request message containing the service name and marshaled input params.
+message RpcRequest {
+  string name      = 1;
+  string protocol  = 2;
+  bytes data       = 3;
+}
+
+// The response message containing the marshaled reply data.
+message RpcReply {
+  bytes data = 1;
+}

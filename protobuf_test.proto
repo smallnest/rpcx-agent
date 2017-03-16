@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package agent;
+
+
+message ProtoArgs { 
+    string A = 1;
+    int32 B = 2;
+}
+
+message ProtoReply { 
+    string C = 1;
+    int32 D = 2;
+}
