@@ -1,4 +1,7 @@
 # rpcx-agent
+
+项目已经移至 [rpcx-ecosystem/rpcx-agent](https://github.com/rpcx-ecosystem/rpcx-agent)
+
 因为 rpcx 主要目的是为 Go 生态圈提供一个服务发现和服务治理的RPC框架，所以它并不直接支持其它编程语言的调用。但是实际情况是国内很多公司主要是用Java、PHP、C++、Python等编程语言作为主力语言，如何让使用这些语言的开发者调用rpcx的服务，是一个让人头疼的问题。
 
 国内互联网企业中使用比较多的是Dubbo和Motan，它们的用户主要使用Java和PHP开发。如果你想提供一个Go语言编写的服务，不太可能要求用户换成Go语言来调用。一个解决方案是使用跨语言的RPC框架，比如gRPC，但是它缺乏服务治理的能力，服务发现和负载均衡也需要自己实现。
